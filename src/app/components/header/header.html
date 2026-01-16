@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto align-items-center">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" 
+                 href="#" 
+                 id="assignmentDropdown" 
+                 role="button" 
+                 data-bs-toggle="dropdown" 
+                 aria-expanded="false">
+                Assignments
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="assignmentDropdown">
+                <li>
+                  <a class="dropdown-item" routerLink="/Assignment4Binding" routerLinkActive="active">Assignment 4 Binding</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/Assignment5Directives" routerLinkActive="active">Assignment-5-Directives</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/Assignment2" routerLinkActive="active">Assignment 2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/EmployeeCRUD" routerLinkActive="active">Employee Crud</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/PipeAssignment" routerLinkActive="active">Pipe Assignment</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/Employee1CRUD" routerLinkActive="active">Employee 1 CRUD</a>
+                </li>
+              </ul>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" 
+                   href="#" 
+                   id="practiceDropdown" 
+                   role="button" 
+                   data-bs-toggle="dropdown" 
+                   aria-expanded="false">
+                  Practice
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="practiceDropdown">
+                  <li>
+                    <a class="dropdown-item" routerLink="/Directives" routerLinkActive="active">Directives</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" routerLink="/Products">Products</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" routerLink="/User">User</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" routerLink="/PipesDemo">Pipes Demo</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" routerLink="/Parent">Parent</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" routerLink="/Categories">Categories</a>
+                  </li>
+                </ul>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/Notes">Notes</a>
+            </li>
+           
+            <li class="nav-item">
+              <div class="ms-lg-3"> 
+                <button 
+                  (click)="toggleTheme()" 
+                  class="btn rounded-circle shadow-sm p-2 d-flex align-items-center justify-content-center"
+                  [class.btn-outline-light]="theme() === 'light'"  [class.btn-warning]="theme() === 'dark'"
+                  style="width: 45px; height: 45px;">
+                  
+                  @if (theme() === 'light') {
+                    <i class="bi bi-moon-stars-fill fs-5"></i>
+                  } @else {
+                    <i class="bi bi-sun-fill fs-5 text-dark"></i>
+                  }
+                </button>
+              </div>
+            </li>
+          </ul>
+        
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
